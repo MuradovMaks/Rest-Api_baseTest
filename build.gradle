@@ -43,3 +43,8 @@ tasks.withType(Test) {
         }
     }
 }
+task zentist_test(type: Test) {
+    useJUnitPlatform {
+        includeTags("Api")
+    }
+}

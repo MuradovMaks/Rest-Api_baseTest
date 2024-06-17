@@ -1,7 +1,10 @@
+package tests;
+
 import io.restassured.RestAssured;
 import modules.*;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static helpers.CustomAllureListener.withCustom;
@@ -19,6 +22,7 @@ import static specs.PutUserSpec.putUserRes;
 import static specs.getListUsersSpec.getUserListReq;
 import static specs.getListUsersSpec.getUserListRes;
 
+@Tag("Api")
 public class ApiTests {
 
     @BeforeAll
