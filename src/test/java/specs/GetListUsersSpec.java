@@ -10,10 +10,10 @@ import static io.restassured.filter.log.LogDetail.BODY;
 import static io.restassured.filter.log.LogDetail.STATUS;
 import static io.restassured.http.ContentType.JSON;
 
-public class getListUsersSpec {
+public class GetListUsersSpec {
     public static RequestSpecification getUserListReq = with()
             .filter(withCustom())
-            .basePath("api/users?page=2")
+            .basePath("/users?page=2")
             .log().headers()
             .log().body()
             .contentType(JSON);

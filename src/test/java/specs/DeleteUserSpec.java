@@ -13,7 +13,7 @@ import static io.restassured.http.ContentType.JSON;
 public class DeleteUserSpec {
     public static RequestSpecification deleteUserReq = with()
             .filter(withCustom())
-            .basePath("api/users/2")
+            .basePath("/users/2")
             .log().headers()
             .log().body()
             .contentType(JSON);

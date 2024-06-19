@@ -13,7 +13,7 @@ import static io.restassured.http.ContentType.JSON;
 public class CreateNewUserSpec {
     public static RequestSpecification createNewUserReq = with()
             .filter(withCustom())
-            .basePath("api/users")
+            .basePath("/users")
             .log().headers()
             .log().body()
             .contentType(JSON);

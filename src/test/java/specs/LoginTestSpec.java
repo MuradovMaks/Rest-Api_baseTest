@@ -14,7 +14,7 @@ public class LoginTestSpec {
 
     public static RequestSpecification loginTestReq = with()
             .filter(withCustom())
-            .basePath("api/register")
+            .basePath("/register")
             .log().headers()
             .log().body()
             .contentType(JSON);

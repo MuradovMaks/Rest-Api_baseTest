@@ -19,15 +19,16 @@ import static specs.LoginTestSpec.loginTestReq;
 import static specs.LoginTestSpec.loginTestRes;
 import static specs.PutUserSpec.putUserReq;
 import static specs.PutUserSpec.putUserRes;
-import static specs.getListUsersSpec.getUserListReq;
-import static specs.getListUsersSpec.getUserListRes;
+import static specs.GetListUsersSpec.getUserListReq;
+import static specs.GetListUsersSpec.getUserListRes;
 
 @Tag("Api")
 public class ApiTests {
 
     @BeforeAll
-    public static void setUp() {
-        RestAssured.baseURI = "https://reqres.in/";
+    public static void setUp()
+    {
+        RestAssured.baseURI = "https://reqres.in/api";
     }
 
     @Test
@@ -36,7 +37,7 @@ public class ApiTests {
         newUser.setName("morpheus");
         newUser.setJob("leader");
         NewUserModel response = step("Make request for Create a New User", () -> {
-            return given()
+            return  given()
                     .spec(createNewUserReq)
                     .body(newUser)
 
